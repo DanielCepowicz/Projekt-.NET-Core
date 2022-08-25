@@ -1,0 +1,50 @@
+﻿@page
+@model Projekt_.NET_Core.Pages.Classes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Class</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Class.ID" />
+            <div class="form-group">
+                <label asp-for="Class.Name" class="control-label"></label>
+                <input asp-for="Class.Name" class="form-control" />
+                <span asp-validation-for="Class.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.Type" class="control-label"></label>
+                <input asp-for="Class.Type" class="form-control" />
+                <span asp-validation-for="Class.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.Time" class="control-label"></label>
+                <input asp-for="Class.Time" class="form-control" />
+                <span asp-validation-for="Class.Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.User" class="control-label"></label>
+                <input asp-for="Class.User" class="form-control" />
+                <span asp-validation-for="Class.User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
